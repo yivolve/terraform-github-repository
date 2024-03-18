@@ -20,7 +20,7 @@ jobs:
 
       - name: Terraform Fmt
         id: fmt
-        run: terraform fmt -check
+        run: terraform fmt
 
       - name: Commit and Push new changes
         id: commit-and-push

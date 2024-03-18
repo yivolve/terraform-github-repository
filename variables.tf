@@ -32,7 +32,7 @@ variable "homepage_url" {
 }
 
 variable "topics" {
-  type = list(string)
+  type =                 list(string)
   description = "(Optional) The list of topics of the repository."
   default = []
 }

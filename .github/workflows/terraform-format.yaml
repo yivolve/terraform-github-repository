@@ -20,13 +20,12 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Fmt
-        id: fmt
         run: terraform fmt
 
       - name: Commit and Push new changes
         id: commit-and-push
         run: |
-          echo SYNC_BRANCH=$(git config user.name github-actions && git config user.email github-actions@github.com && git add . && git commit -m "Saving new files for ${GITHUB_REF#refs/heads/} branch" && git push) >> $GITHUB_OUTPUT
+          echo SYNC_BRANCH=$(git config user.name github-actions && git config user.email github-actions@github.com && git add . && git commit -m "Saving new cahnges for ${{ github.head_ref }} branch" && git push) >> $GITHUB_OUTPUT
 
       - name: Generate job summary
         if: always()

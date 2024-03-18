@@ -2,7 +2,7 @@ name: 'Terraform Format'
 on:
   pull_request:
     branches: ["main"]
-    types: ["closed", "opened", "synchronize"]
+    types: ["closed"]
 
 jobs:
   if_merged:
@@ -10,7 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "The PR was successfully merged."
-    - uses: hashicorp/setup-terraform@v3
-      with:
-        terraform_version: "1.5.7"
+        echo "The PR was successfully merged: Add more steps that need to take place after merging to the target branch."

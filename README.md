@@ -2,8 +2,6 @@
 
 Terraform module to create Github repositories.
 
-
-
 ## How to use this module with Terragrunt
 
 ```hcl

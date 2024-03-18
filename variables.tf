@@ -24,3 +24,15 @@ variable "auto_init" {
   description = "(Optional) Set to true to produce an initial commit in the repository."
   default     = false
 }
+
+variable "homepage_url" {
+  type = string
+  description = "(Optional) URL of a page describing the project."
+  default = null
+}
+
+variable "topics" {
+  type = list(string)
+  description = "(Optional) The list of topics of the repository."
+  default = []
+}

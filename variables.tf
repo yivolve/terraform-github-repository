@@ -26,13 +26,13 @@ variable "auto_init" {
 }
 
 variable "homepage_url" {
-  type = string
+  type        = string
   description = "(Optional) URL of a page describing the project."
-  default = null
+  default     = null
 }
 
 variable "topics" {
-  type =                 list(string)
+  type        = list(string)
   description = "(Optional) The list of topics of the repository."
-  default = []
+  default     = []
 }

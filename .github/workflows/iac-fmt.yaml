@@ -1,0 +1,16 @@
+name: 'Terraform Format'
+on:
+  pull_request:
+    branches: ["main"]
+    types: ["closed", "opened"]
+
+jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "The PR was successfully merged."
+    - uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: "1.5.7"
